@@ -51,6 +51,7 @@ public class StoreBookDetails {
 				break;
 
 			case 4:
+				System.out.println("enter the isbn = ");
 				String isbn = sc.next();
 				BookDetails key = new BookDetails();
 				key.setIsbn(isbn);
@@ -62,7 +63,6 @@ public class StoreBookDetails {
 
 			case 5:
 				list.clear();
-				System.out.println(list);
 				break;
 
 			case 6:
