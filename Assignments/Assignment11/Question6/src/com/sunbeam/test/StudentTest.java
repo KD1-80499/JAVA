@@ -4,7 +4,10 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.LinkedHashMap;
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
+
 
 import com.sunbeam.Student;
 
@@ -19,6 +22,7 @@ public class StudentTest {
 			System.out.println("0.Exit");
 			System.out.println("1.Insert and accept student in map ");
 			System.out.println("2.Find rollno of student");
+			System.out.println("3.Print all students");
 			Scanner sc = new Scanner(System.in);
 			choice = sc.nextInt();
 
@@ -43,6 +47,15 @@ public class StudentTest {
 				System.out.println(f);
 			}
 				break;
+				
+				
+			case 3: Set<Entry<Integer,Student>> entries=map.entrySet();
+			for(Entry<Integer,Student>entry: entries)
+			{
+				System.out.println(entry.getKey()+""+entry.getValue());
+			}
+			    break;
+			
 			}
 		} while (choice != 0);
 	}

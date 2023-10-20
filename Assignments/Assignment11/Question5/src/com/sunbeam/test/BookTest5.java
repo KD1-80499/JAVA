@@ -6,7 +6,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Set;
 
 import com.sunbeam.BookDetails5;
 
@@ -22,6 +24,7 @@ public class BookTest5 {
 		System.out.println("0.Exit");
 		System.out.println("1.Insert in map and accept");
 		System.out.println("2.Find in map");
+		System.out.println("3.Display All values");
 		Scanner sc=new Scanner(System.in);
 		choice=sc.nextInt();
 		
@@ -48,10 +51,17 @@ public class BookTest5 {
 			System.out.println(f);
 		  }
 		break;
+		
+		
+		case 3: 
+			Set<Entry<String,BookDetails5>>entries=map.entrySet();
+			for(Entry<String,BookDetails5> entry:entries)
+				System.out.println(entry.getKey()+""+entry.getValue());
+			
 		}
 		}while(choice!=0);
 	}
-	}
+}
 //No need to write equals() and hashCode() methods
 
 
